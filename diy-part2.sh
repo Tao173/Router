@@ -16,6 +16,7 @@
 #rm -rf feeds/luci/applications/luci-app-pushbot
 
 # 添加额外软件包
+git clone https://github.com/siropboy/sirpdboy-package package/sirpdboy-package
 git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/luci-app-jd-dailybonus
 # git clone https://github.com/jerrykuku/lua-maxminddb.git package/lua-maxminddb
 # git clone https://github.com/jerrykuku/luci-app-vssr.git package/luci-app-vssr

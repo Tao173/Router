@@ -21,6 +21,7 @@ env:
   UPLOAD_COWTRANSFER: false
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: true
+  FILE_NAME: RockPro64
   TZ: Asia/Shanghai
 
 jobs:

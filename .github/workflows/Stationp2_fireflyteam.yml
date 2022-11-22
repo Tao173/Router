@@ -1,4 +1,4 @@
-name: RockPro64_OpenWrt
+name: Station_P2_OpenWrt
 
 on:
   repository_dispatch:
@@ -10,12 +10,12 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/Lienol/openwrt
-  REPO_BRANCH: 21.02
+  REPO_URL: https://github.com/FireflyTeam/lede.git
+  REPO_BRANCH: station-p2
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: RockPro64/.config
-  DIY_P1_SH: RockPro64/diy-part1.sh
-  DIY_P2_SH: RockPro64/diy-part2.sh
+  CONFIG_FILE: StationP2/.config
+  DIY_P1_SH: StationP2/diy-part1.sh
+  DIY_P2_SH: StationP2/diy-part2.sh
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
@@ -83,7 +83,7 @@ jobs:
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
-        
+
     - name: Setup Debug Session 'touch /tmp/keepalivegit'
       if: (github.event.inputs.ssh == 'true' && github.event.inputs.ssh  != 'false') 
       uses: csexton/debugger-action@master

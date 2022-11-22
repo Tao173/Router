@@ -38,6 +38,16 @@ svn co https://github.com/op4packages/pdnsd-alt/trunk  package/pdnsd-alt
 # 增加shortcutmenu默认配置
 # curl -fsSL  https://raw.githubusercontent.com/Tao173/Auto-Update-Router/main/DIY/shortcutmenu > ./package/luci-app-shortcutmenu/root/etc/config/shortcutmenu
 
+# 在线用户
+svn co https://github.com/haiibo/packages/trunk/luci-app-onliner package/luci-app-onliner
+#sed -i '/bin\/sh/a\uci set nlbwmon.@nlbwmon[0].refresh_interval=2s' package/lean/default-settings/files/zzz-default-settings
+#sed -i '/nlbwmon/a\uci commit nlbwmon' package/lean/default-settings/files/zzz-default-settings
+# Alist
+svn co https://github.com/sbwml/luci-app-alist/trunk/luci-app-alist package/luci-app-alist
+svn co https://github.com/sbwml/luci-app-alist/trunk/alist package/alist
+# 流量监控
+svn co https://github.com/haiibo/packages/trunk/luci-app-wrtbwmon package/luci-app-wrtbwmon
+svn co https://github.com/haiibo/packages/trunk/wrtbwmon package/wrtbwmon
 
 # 科学上网插件依赖
 svn co https://github.com/vernesong/OpenClash/trunk/luci-app-openclash package/luci-app-openclash
